@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body[data-theme="light"] {
+  --color-1: #e2dfdd;
+}
+
+body[data-theme="dark"] {
+  --color-1: #1b1b1b;
+}
+
+body {
+  background: var(--color-1);
+}
+/*# sourceMappingURL=style.css.map */
