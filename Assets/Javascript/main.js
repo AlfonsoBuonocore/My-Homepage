@@ -53,3 +53,25 @@
     // setto nello stoage locale il mio attributo corrispondente al tema del sito in modo che nel caricamento succesivo della pagina il tema sara gia attivo
     localStorage.setItem('selected-theme',Theme)
   }
+
+// ----------- apertura menu ------------- // 
+
+  const MenuButton = document.querySelector(".menu-button")
+  var OpenNav = getOpenMenu()
+
+  MenuButton.addEventListener("click", () =>{
+    changeMenu(OpenNav)
+    OpenNav = getOpenMenu()
+  })
+
+  function getOpenMenu(){
+    return document.querySelector("nav").getAttribute("open-nav")
+  }
+
+  function changeMenu(openNav){
+    if(openNav == "true") document.querySelector("nav").setAttribute("open-nav" , "false")
+    else document.querySelector("nav").setAttribute("open-nav" , "true")
+  }
+
+  
+
