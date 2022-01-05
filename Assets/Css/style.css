@@ -6,6 +6,8 @@
           box-sizing: border-box;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
+  -webkit-transition: background 0s;
+  transition: background 0s;
 }
 
 body[data-theme="light"] {
@@ -38,7 +40,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--color-1);
+  background: transparent;
   /* filter: drop-shadow(2px 0 5px rgba(0,0,0,.5)); */
   display: -webkit-box;
   display: -ms-flexbox;

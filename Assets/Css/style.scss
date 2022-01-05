@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     transition: all .5s linear;
+    transition: background 0s;
 }
 
 body[data-theme="light"]{
@@ -36,7 +37,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    background: var(--color-1);
+    background: transparent;
     /* filter: drop-shadow(2px 0 5px rgba(0,0,0,.5)); */
     display: flex;
     justify-content: space-between;
