@@ -8,13 +8,13 @@
     if (StorageTheme == "light") {
       // se l'informazione è light setto il data-theme del body a light e metto come icona dello switch-theme il sole togliendo la luna
       document.body.setAttribute("data-theme","light")
-      ThemeButton.classList.remove("bi-moon")
-      ThemeButton.classList.add("bi-sun")
+      ThemeButton.classList.remove("bi-moon-fill")
+      ThemeButton.classList.add("bi-sun-fill")
     }else{
       // invece se l'informazione è dark o altro non corrispondente a light setto il data-theme del body a dark e metto come icona dello switch-theme la luna togliendo il sole
       document.body.setAttribute("data-theme","dark")
-      ThemeButton.classList.remove("bi-sun")
-      ThemeButton.classList.add("bi-moon")
+      ThemeButton.classList.remove("bi-sun-fill")
+      ThemeButton.classList.add("bi-moon-fill")
     }
   }
 
@@ -34,21 +34,22 @@
   }
   // icona
   function getIcon(){
-    return ThemeButton.classList.contains("bi-moon") ? "bi-moon" : "bi-sun"
+    return ThemeButton.classList.contains("bi-moon-fill") ? "bi-moon-fill" : "bi-sun-fill"
   }
 
   function setTheme(theme){
     if (theme == "dark") {
       document.body.setAttribute("data-theme","light")
-      ThemeButton.classList.remove("bi-moon")
-      ThemeButton.classList.add("bi-sun")
+      ThemeButton.classList.remove("bi-moon-fill")
+      ThemeButton.classList.add("bi-sun-fill")
     }else{
       document.body.setAttribute("data-theme","dark")
-      ThemeButton.classList.remove("bi-sun")
-      ThemeButton.classList.add("bi-moon")
+      ThemeButton.classList.remove("bi-sun-fill")
+      ThemeButton.classList.add("bi-moon-fill")
     }
     Theme = getTheme();
     Icon = getIcon();
+    console.log( Icon + " " + Theme)
     // setto nello stoage locale il mio attributo corrispondente al tema del sito in modo che nel caricamento succesivo della pagina il tema sara gia attivo
     localStorage.setItem('selected-theme',Theme)
   }
