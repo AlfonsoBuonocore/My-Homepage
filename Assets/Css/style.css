@@ -6,8 +6,6 @@
           box-sizing: border-box;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
-  -webkit-transition: background 0s;
-  transition: background 0s;
 }
 
 body[data-theme="light"] {
@@ -27,6 +25,8 @@ body[data-theme="dark"] {
 }
 
 body {
+  -webkit-transition: background 0s;
+  transition: background 0s;
   background: var(--color-1);
 }
 

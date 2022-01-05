@@ -4,7 +4,6 @@
     margin: 0;
     box-sizing: border-box;
     transition: all .5s linear;
-    transition: background 0s;
 }
 
 body[data-theme="light"]{
@@ -24,6 +23,7 @@ body[data-theme="dark"]{
 }
 
 body{
+    transition: background 0s;
     background: var(--color-1);
 }
 
