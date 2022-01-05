@@ -59,6 +59,11 @@ header{
             flex-direction: row;
             overflow: hidden;
             color: var(--color-4);
+            font-size: 20px;
+            li{
+                margin: 20px;
+                text-align: center;
+            }
         }
     }
     nav[open-nav="false"]{
@@ -83,11 +88,6 @@ header{
             max-height: 100px;
             overflow: hidden;
             transform: translateX(-100%);
-            font-size: 20px;
-            li{
-                margin: 20px;
-                text-align: center;
-            }
         }
     }
 }

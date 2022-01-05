@@ -79,6 +79,12 @@ header nav .menu {
           flex-direction: row;
   overflow: hidden;
   color: var(--color-4);
+  font-size: 20px;
+}
+
+header nav .menu li {
+  margin: 20px;
+  text-align: center;
 }
 
 header nav[open-nav="false"] .menu-button::before {
@@ -100,11 +106,5 @@ header nav[open-nav="true"] .menu {
   overflow: hidden;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  font-size: 20px;
-}
-
-header nav[open-nav="true"] .menu li {
-  margin: 20px;
-  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
