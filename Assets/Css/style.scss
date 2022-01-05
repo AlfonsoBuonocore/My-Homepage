@@ -24,6 +24,11 @@ body[data-theme="dark"]{
 
 body{
     background: var(--color-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
 .theme-button{
@@ -36,12 +41,13 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    background: transparent;
+    width: 100%;
+    background: var(--color-1);
     /* filter: drop-shadow(2px 0 5px rgba(0,0,0,.5)); */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-height: 55px;
+    height: 55px;
     nav,i{
         margin: 10px;
     }
@@ -62,6 +68,18 @@ header{
             li{
                 margin: 20px;
                 text-align: center;
+                i{
+                    &.active{
+                        color: #4bb0c2;
+                    }
+                }
+            }
+            a{
+                color: var(--color-4);
+                text-decoration: none;
+                &:visited{
+                    color: var(--color-4);
+                }
             }
         }
     }
@@ -89,4 +107,11 @@ header{
             transform: translateX(-100%);
         }
     }
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
 }
