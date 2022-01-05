@@ -90,6 +90,8 @@ header nav .menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   overflow: hidden;
   color: var(--color-4);
   font-size: 20px;
