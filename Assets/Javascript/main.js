@@ -1,3 +1,5 @@
+document.querySelector(".spazio").style.height = document.querySelector("header").clientHeight + "px"
+
 // ---------------- Thema-Sito ----------------- // 
   const ThemeButton = document.querySelector('.theme-button')
   // vedo se nello storage del mio browser c'è salvato un attributo collegato al tema del sito
@@ -73,5 +75,9 @@
     else document.querySelector("nav").setAttribute("open-nav" , "true")
   }
 
-  
+// ------------ cambio filter header ------------- //
 
+  window.onscroll = function(){
+    if(window.scrollY >= 30) document.querySelector("header").style.filter = "drop-shadow(var(--nav-bar-shadow))"
+    else document.querySelector("header").style.filter = "none"
+  }
