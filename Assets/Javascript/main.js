@@ -81,3 +81,16 @@ document.querySelector(".spazio").style.height = document.querySelector("header"
     if(window.scrollY >= 30) document.querySelector("header").style.filter = "drop-shadow(var(--nav-bar-shadow))"
     else document.querySelector("header").style.filter = "none"
   }
+
+// ------------- scroll to top ---------------- //
+  window.onscroll = function(){
+    if(window.scrollY >= 30) document.querySelector(".scroll-to-top").style.right = "20px"
+    else document.querySelector(".scroll-to-top").style.right = "-100px"
+  }
+
+  document.querySelector(".scroll-to-top").onclick = () =>{
+    window.scrollTo({
+      top:0,
+      behavior: 'smooth'
+    })
+  }

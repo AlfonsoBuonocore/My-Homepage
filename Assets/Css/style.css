@@ -6,6 +6,26 @@
           box-sizing: border-box;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
+  scroll-behavior: smooth;
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: -100px;
+  bottom: 20px;
+  padding: 5px;
+  background-color: var(--color-4);
+  color: var(--color-1);
+  font-size: 20px;
+  -webkit-filter: opacity(0.6);
+          filter: opacity(0.6);
+}
+
+.scroll-to-top:hover {
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 
 body[data-theme="light"] {
