@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&family=The+Nautigal:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .5s linear;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--color-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--color-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    nav,i{
+        margin: 10px;
+    }
+    nav{
+        list-style: none;
+        position: relative;
+        width: 100%;
+        text-align: end;
+        .menu-button{
+            font-size: 30px;
+            color: var(--color-4);
+        }
+        .menu{
+            position: absolute;
+            top: 55px;
+            overflow: hidden;
+            width: 100%;
+            color: var(--color-4);
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            li{
+                margin: 20px;
+                text-align: left;
+                i{
+                    &.active{
+                        color: #4bb0c2;
+                    }
+                }
+            }
+            a{
+                color: var(--color-4);
+                text-decoration: none;
+                &:visited{
+                    color: var(--color-4);
+                }
+            }
+        }
+        @media(max-width:600px) {
+            .menu{
+                flex-wrap: wrap;
+            }
+        }
+    }
+    nav[open-nav="false"]{
+        .menu-button{
+            &::before{
+                content: "\f3c6";
+            }
+        }
+        .menu{
+            position: absolute;
+            visibility: hidden;
+            max-height: 0px;
+        }
+    }
+    nav[open-nav="true"]{
+        .menu-button{
+            &::before{
+                content: "\f62a";
+            }
+        }
+        .menu{
+            max-height: 50px;
+            overflow: hidden;
+        }
+    }
+}

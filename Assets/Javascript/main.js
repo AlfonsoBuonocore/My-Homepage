@@ -1,4 +1,5 @@
 document.querySelector(".spazio").style.height = document.querySelector("header").clientHeight + "px"
+document.querySelector(".menu").style.top = document.querySelector("header").clientHeight + "px"
 
 // ---------------- Thema-Sito ----------------- // 
   const ThemeButton = document.querySelector('.theme-button')
