@@ -76,17 +76,21 @@ document.querySelector(".menu").style.top = document.querySelector("header").cli
     else document.querySelector("nav").setAttribute("open-nav" , "true")
   }
 
-// ------------ cambio filter header ------------- //
-
-  window.onscroll = function(){
-    if(window.scrollY >= 30) document.querySelector("header").style.filter = "drop-shadow(var(--nav-bar-shadow))"
-    else document.querySelector("header").style.filter = "none"
-  }
-
 // ------------- scroll to top ---------------- //
   window.onscroll = function(){
-    if(window.scrollY >= 30) document.querySelector(".scroll-to-top").style.right = "20px"
-    else document.querySelector(".scroll-to-top").style.right = "-100px"
+    if(window.scrollY >= 30) {
+      document.querySelector(".scroll-to-top").style.right = "20px"
+      document.querySelector("header").style.boxShadow = "var(--nav-bar-shadow)"
+    }
+    else{ 
+      document.querySelector(".scroll-to-top").style.right = "-100px"
+      document.querySelector("header").style.boxShadow = "none"
+    }
+    if(window.scrollY >= 30 && OpenNav == "true"){
+      changeMenu(OpenNav)
+      OpenNav = getOpenMenu()
+    }
+    
   }
 
   document.querySelector(".scroll-to-top").onclick = () =>{
