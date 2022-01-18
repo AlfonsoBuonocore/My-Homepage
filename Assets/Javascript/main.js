@@ -99,3 +99,8 @@ document.querySelector(".menu").style.top = document.querySelector("header").cli
       behavior: 'smooth'
     })
   }
+
+  window.addEventListener("resize", ()=>{
+    if(screen.width <= 600)
+      console.log(screen.width)
+  })
