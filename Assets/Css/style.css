@@ -147,7 +147,7 @@ header nav .menu {
   max-height: 0px;
   -webkit-transition-duration: .4s;
           transition-duration: .4s;
-  height: 75px;
+  height: 150px;
 }
 
 header nav .menu li {
@@ -198,6 +198,12 @@ header nav[open-nav="true"] .menu-button::before {
 header nav[open-nav="true"] .menu {
   max-height: 75px;
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  header nav[open-nav="true"] .menu {
+    max-height: 150px;
+  }
 }
 
 .main {
