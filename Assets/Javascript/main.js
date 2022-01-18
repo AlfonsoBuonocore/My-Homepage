@@ -98,9 +98,13 @@ document.querySelector(".menu").style.top = document.querySelector("header").cli
       top:0,
       behavior: 'smooth'
     })
+<<<<<<< Updated upstream
   }
 
   window.addEventListener("resize", ()=>{
     if(screen.width <= 600)
       console.log(screen.width)
   })
+=======
+  }
+>>>>>>> Stashed changes
