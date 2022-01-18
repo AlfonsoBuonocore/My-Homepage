@@ -9,7 +9,9 @@
   scroll-behavior: smooth;
 }
 
-a[name="esempi"] {
+a[name="esempi"],
+a[name="home"],
+a[name="curriculum"] {
   width: 0;
   height: 0;
   visibility: hidden;
@@ -34,6 +36,16 @@ a[name="esempi"] {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   color: #db9956;
+}
+
+@media (max-width: 600px) {
+  .scroll-to-top {
+    -webkit-filter: opacity(1);
+            filter: opacity(1);
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    color: #db9956;
+  }
 }
 
 body[data-theme="light"] {
@@ -156,7 +168,7 @@ header nav .menu li {
   height: fit-content;
 }
 
-header nav .menu li i.active {
+header nav .menu li.active {
   color: #4bb0c2;
 }
 
@@ -243,13 +255,15 @@ header nav[open-nav="true"] .menu {
 .main .section-esempi .esempi-immagini img {
   width: 350px;
   height: 175px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .main .section-esempi .esempi-immagini a {
   display: block;
   position: relative;
   text-decoration: none;
-  color: var(--i);
+  color: #347cce;
   width: 350px;
   height: 175px;
 }
@@ -262,7 +276,7 @@ header nav[open-nav="true"] .menu {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .main .section-esempi .esempi-immagini:hover img {
@@ -272,6 +286,19 @@ header nav[open-nav="true"] .menu {
 
 .main .section-esempi .esempi-immagini:hover p {
   visibility: visible;
+}
+
+@media (max-width: 600px) {
+  .main .section-esempi .esempi-immagini a {
+    color: #347cce;
+  }
+  .main .section-esempi .esempi-immagini a p {
+    visibility: visible;
+  }
+  .main .section-esempi .esempi-immagini img {
+    -webkit-filter: blur(2px) grayscale(100%);
+            filter: blur(2px) grayscale(100%);
+  }
 }
 
 .main .section-home {
