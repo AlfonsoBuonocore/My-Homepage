@@ -72,8 +72,8 @@ document.querySelector(".menu").style.top = document.querySelector("header").cli
   }
 
   function changeMenu(openNav){
-    if(openNav == "true") document.querySelector("nav").setAttribute("open-nav" , "false")
-    else document.querySelector("nav").setAttribute("open-nav" , "true")
+    if(openNav) document.querySelector("nav").setAttribute("open-nav" , false)
+    else document.querySelector("nav").setAttribute("open-nav" , true)
   }
 
 // ------------- scroll to top ---------------- //
