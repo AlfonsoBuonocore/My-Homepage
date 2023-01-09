@@ -86,10 +86,10 @@ document.querySelector(".menu").style.top = document.querySelector("header").cli
       document.querySelector(".scroll-to-top").style.right = "-100px"
       document.querySelector("header").style.boxShadow = "none"
     }
-    if(window.scrollY >= 30 && OpenNav == "true"){
+    /*if(window.scrollY >= 30 && OpenNav == "true"){
       changeMenu(OpenNav)
       OpenNav = getOpenMenu()
-    }
+    }*/
     
   }
 
